@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Screen 1: Location Input -->
+    <section id="input-screen" class="screen active">
+        <h1>Emotional Weather Forecast</h1>
+        <p>Where do you want to emotionally travel today?</p>
+        <form id="location-form">
+            <input type="text" id="location-input" required>
+            <button type="submit">Travel</button>
+        </form>
+        <div id="error-message" class="error-text" style="display: none; color: var(--text-color); margin-top: 1rem; font-style: italic; max-width: 80%;"></div>
+    </section>
+
+    <!-- Screen 2: Loading -->
+    <section id="loading-screen" class="screen">
+        <div class="spinner"></div>
+        <p>Scanning the emotional atmosphere…</p>
+    </section>
+
+    <!-- Screen 3: Forecast -->
+    <section id="forecast-screen" class="screen">
+        <div id="forecast-icon" aria-hidden="true">☀️</div>
+        <h2 id="emotional-sentence">Feeling bright and optimistic!</h2>
+        <div id="weather-info">
+            <p>Current Weather: <span id="temp">22°C</span>, <span id="condition">Sunny</span></p>
+        </div>
+        <div class="controls">
+            <button id="btn-refresh">Refresh my vibes</button>
+            <button id="btn-reset">Take me somewhere else</button>
+        </div>
+    </section>
+</body>
+</html>
